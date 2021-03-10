@@ -2,6 +2,7 @@ package com.softwareverde.logging.slf4j;
 
 import com.softwareverde.logging.Logger;
 import org.slf4j.Marker;
+import org.slf4j.helpers.FormattingTuple;
 import org.slf4j.helpers.MessageFormatter;
 
 public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
@@ -28,7 +29,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void trace(final String format, final Object object) {
-        Logger.trace(MessageFormatter.format(format, object).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.format(format, object);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.trace(message, throwable);
     }
 
     @Override
@@ -38,7 +42,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void trace(final String format, final Object... objects) {
-        Logger.trace(MessageFormatter.arrayFormat(format, objects).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, objects);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.trace(message, throwable);
     }
 
     @Override
@@ -88,7 +95,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void debug(final String format, final Object object) {
-        Logger.debug(MessageFormatter.format(format, object).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.format(format, object);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.debug(message, throwable);
     }
 
     @Override
@@ -98,7 +108,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void debug(final String format, final Object... objects) {
-        Logger.debug(MessageFormatter.arrayFormat(format, objects).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, objects);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.debug(message, throwable);
     }
 
     @Override
@@ -148,7 +161,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void info(final String format, final Object object) {
-        Logger.info(MessageFormatter.format(format, object).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.format(format, object);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.info(message, throwable);
     }
 
     @Override
@@ -158,7 +174,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void info(final String format, final Object... objects) {
-        Logger.info(MessageFormatter.arrayFormat(format, objects).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, objects);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.info(message, throwable);
     }
 
     @Override
@@ -208,7 +227,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void warn(final String format, final Object object) {
-        Logger.warn(MessageFormatter.format(format, object).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.format(format, object);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.warn(message, throwable);
     }
 
     @Override
@@ -218,7 +240,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void warn(final String format, final Object... objects) {
-        Logger.warn(MessageFormatter.arrayFormat(format, objects).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, objects);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.warn(message, throwable);
     }
 
     @Override
@@ -268,7 +293,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void error(final String format, final Object object) {
-        Logger.error(MessageFormatter.format(format, object).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.format(format, object);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.error(message, throwable);
     }
 
     @Override
@@ -278,7 +306,10 @@ public class JavaLoggerSlf4jAdapter implements org.slf4j.Logger {
 
     @Override
     public void error(final String format, final Object... objects) {
-        Logger.error(MessageFormatter.arrayFormat(format, objects).getMessage());
+        final FormattingTuple formattingTuple = MessageFormatter.arrayFormat(format, objects);
+        final String message = formattingTuple.getMessage();
+        final Throwable throwable = formattingTuple.getThrowable();
+        Logger.error(message, throwable);
     }
 
     @Override
